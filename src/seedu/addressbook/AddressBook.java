@@ -14,7 +14,16 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.Set;
 
 /*
  * NOTE : =============================================================
@@ -133,7 +142,11 @@ public class AddressBook {
 
     private static final String DIVIDER = "===================================================";
 
-
+    /* We use a HashMap array to store details of a single person.
+     * The enum given below are the names for the different data elements of a person
+     * used by the internal HashMap key storage format.
+     * For example, a person's name can be retrieved by inserting PersonProperty.NAME as the key.
+     */
 
     private enum PersonProperty  {NAME, EMAIL, PHONE};
 
